@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon"
+      href="./assets/lpgo1.png">
+    <title>Fashion Tree Boutique</title>
+  </head>
+  <body>
+    <div class="section__container logo__header">
+      <img src="./assets/lpgo1.png" alt="logo" />
+      <div class="contact__us">
+        <p><a href="mailto:fashiontree@gmail.com"><i class="ri-mail-fill"></i>fashiontree@gmail.com</a></p>
+        <p><a href="tel:08129986555"><i class="ri-phone-fill"></i> 08129986555</a></p>
+      </div>
+    </div>
+    <nav>
+      <ul class="sidebar">
+        <li onclick=hideSidebar()>
+          <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26">
+            <path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/>
+          </svg></a>
+        </li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#collections">Collections</a></li>
+        <li><a href="#top-picks">Top Picks</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+      <ul>
+        
+        <li class="hideOnMobile"><a href="#home">Home</a></li>
+        <li class="hideOnMobile"><a href="#about">About</a></li>
+        <li class="hideOnMobile"><a href="#services">Services</a></li>
+        <li class="hideOnMobile"><a href="#collections">Collections</a></li>
+        <li class="hideOnMobile"><a href="#top-picks">Top Picks</a></li>
+        <li class="hideOnMobile"><a href="#contact">Contact Us</a></li>
+        <li class="menu-button" onclick=showSidebar()>
+          <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26">
+            <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/>
+          </svg></a>
+        </li>
+      </ul>
+    </nav>
+    <header>
+      <div class="section__container header__container">
+        <p>Handcrafted Beauty, Just for You</p>
+        <h1>Elegance in Every Stich</h1>
+        <button class="btn">SHOP NOW</button>
+      </div>
+    </header>
+    <section class="about" id="about">
+      <div class="main">
+        <img src="./assets/beige.png" alt="">
+        <div class="all-text">
+          <h4>About Us</h4>
+          <h1>Handcrafted with Care</h1>
+          <p>At Fashion Tree Boutique, we specialize in offering beautifully handcrafted and embroidered garments. Our commitment to quality and reasonable pricing has earned us wonderful feedback from our customers and their referrals. We focus on delivering exceptional, personalized attire that reflects both style and craftsmanship
+          </p>
+          <div class="btn">
+            <button type="button">Our Team</button>
+            <button type="button">Our Services</button>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="banner__1">
+      <div class="section__container banner__1__container">
+        <div class="icon">
+          <img src="assets/churidar.png" alt="icon" />
+          <span>Casualwear</span>
+        </div>
+        <div class="icon">
+          <img src="./assets/saree.png" alt="icon" />
+          <span>Partywear</span>
+        </div>
+        <div class="icon">
+          <img src="assets/west.png" alt="icon" />
+          <span>Kidswear</span>
+        </div>
+        <div class="icon">
+          <img src="assets/material.png" alt="icon" />
+          <span>Bespoke custom Orders</span>
+        </div>
+        <div class="icon">
+          <img src="assets/lahanga.png" alt="icon" />
+          <span>Bridalwear</span>
+        </div>
+      </div>
+    </section>
+    <section id="services">
+      <div class="section__container arrivals__container">
+        <div class="section__header">
+          <h3 class="section__title">Our Services</h3>
+          <div class="arrivals__nav">
+            <span>Custom Embroidery</span>
+            <span>Hand-Stiched Garments</span>
+            <span>Cut Work Detailing</span>
+            <span>Bespoke Bridal Wear</span>
+          </div>
+        </div>
+        <div class="arrivals__grid">
+          <div class="arrivals__image">
+            <img src="assets/emb3.jpeg" alt="arrivals" />
+          </div>
+          <div class="arrivals__image">
+            <img src="assets/kurta.jpeg" alt="arrivals" />
+          </div>
+          <div class="arrivals__image">
+            <img src="assets/cut2.jpeg" alt="arrivals" />
+          </div>
+          <div class="arrivals__image">
+            <img src="assets/bespoke.jpeg" alt="arrivals" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="collections">
+      <div class="section__container seller__container">
+        <div class="section__header">
+          <div class="section__title">Collections</div>
+          <div class="seller__nav">
+            <span><i class="ri-arrow-left-s-line"></i></span>
+            <span><i class="ri-arrow-right-s-line"></i></span>
+          </div>
+        </div>
+        <div class="seller__grid">
+          <div class="seller__card">
+            <img src="assets/blouse.jpeg" alt="seller" />
+            <div class="seller__card__details">
+              <p>Partywear Blouse</p>
+            
+            </div>
+          </div>
+          <div class="seller__card">
+            <img src="assets/coll2.jpeg" alt="seller" />
+            <div class="seller__card__details">
+              <p>Casual Salwar</p>
+              
+            </div>
+          </div>
+          <div class="seller__card">
+            <img src="assets/coll3.jpeg" alt="seller" />
+            <div class="seller__card__details">
+              <p>Bridal Lehanga</p>
+             
+            </div>
+          </div>
+          <div class="seller__card">
+            <img src="assets/coll4.jpeg" alt="seller" />
+            <div class="seller__card__details">
+              <p>Kidswear Frocks</p>
+              
+            </div>
+          </div>
+          <div class="seller__card">
+            <img src="assets/coll5.jpeg" alt="seller" />
+            <div class="seller__card__details">
+              <p>Sharara</p>
+             
+            </div>
+          </div>
+          <div class="seller__card">
+            <img src="assets/coll6.jpeg" alt="seller" />
+            <div class="seller__card__details">
+              <p>Bridal Wear Saree & Blouse</p>
+             
+            </div>
+          </div>
+          <div class="seller__card">
+            <img src="assets/coll7.jpeg" alt="seller" />
+            <div class="seller__card__details">
+              <p>Cutton Anarkali</p>
+              
+            </div>
+          </div>
+          <div class="seller__card">
+            <img src="assets/coll8.jpeg" alt="seller" />
+            <div class="seller__card__details">
+              <p>Partywear Lehanga</p>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="banner__3">
+      <div class="section__container banner__3__container">
+        <p>Customize Your Dress</p>
+        <h2>Handcrafted for a Perfect Fit</h2>
+      </div>
+    </section>
+
+    <section id="top-picks">
+      <div class="section__container product__container">
+        <div class="section__header">
+          <h3 class="section__title">Top Picks</h3>
+          <div class="product__nav">
+            <span>Stunning Embroidery Blouses</span>
+            <span><i class="ri-arrow-left-s-line"></i></span>
+            <span><i class="ri-arrow-right-s-line"></i></span>
+          </div>
+        </div>
+        <div class="product__grid">
+          <div class="product__image">
+            <img src="./assets/top5.jpeg" alt="product" />
+          </div>
+          <div class="product__image">
+            <img src="./assets/top6.jpeg" alt="product" />
+          </div>
+          <div class="product__image">
+            <img src="./assets/top2.jpeg" alt="product" />
+          </div>
+          <div class="product__image">
+            <img src="./assets/top3.jpeg" alt="product" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+   
+    <footer id="contact">
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <img src="assets/lpgo1.png" alt="footer__logo" 
+          class="footer__logo" />
+          <h4>
+          Elegant, handcrafted embroidery. Explore our unique collections and find your perfect style.
+          </h4>
+          <p><a href="mailto:fashiontree@gmail.com"><i class="ri-mail-fill"></i>fashiontree@gmail.com</a></p>
+          <p><a href="tel:08129986555"><i class="ri-phone-fill"></i> 08129986555</a></p>
+          <p>
+           <a href="https://maps.app.goo.gl/CebE52ArnVwy86eQA"><i class="ri-map-pin-2-fill"></i>  Vadakkevilla, Madannada, Kollam, Kerala 691010</a>
+        </div>
+        <div class="footer__col">
+          <h3>Quick Links</h3>
+          <p><a href="#home">HOME</a> </p>
+          <p><a href="#about">ABOUT</a></p>
+          <p> <a href="#services">SERVICES</a></p>
+          <p><a href="#collections">COLLECTIONS</a></p>
+          <p><a href="#top-picks">TOP PICKS</a></p>
+          <p> <a href="#contact">CONTACT US</a></p>
+        </div>
+        <div class="footer__col">
+          <h3>Follow Us On</h3>
+          <div class="footer__socials">
+            <a href="https://www.facebook.com/fashiontree01/"><img src="assets/facebook.png" alt="facebook" /></a>
+            <a href="https://www.instagram.com/fashiontree_boutique/"><img src="assets/instagram.png" alt="instagram" /></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bar">
+        © 2024 Fashion Tree Designer Boutique. All Rights Reserved
+      </div>
+    </footer>
+    <script>
+      function showSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'flex'
+      }
+      function hideSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'none'
+      }
+    </script>
+  </body>
+</html>
