@@ -63,29 +63,35 @@ body {
 .logo__header img {
   max-width: 50px;
   margin-left: -180px;
+  margin-top: -80px;
 }
-
 @media (max-width: 768px) {
   .logo__header {
     justify-content: center; /* Center logo and contact info */
-    gap: 1rem; /* Reduce gap on smaller screens */
+    gap: 1rem; /* Reduce gap */
+    padding: 0.5rem; /* Adjust padding */
   }
 
   .logo__header img {
-    margin-left: 0; /* Reset the margin to avoid overflowing */
+    max-width: 40px; /* Reduce logo size */
+    margin-left: 0; /* Reset margin-left */
+    margin-top: 0; /* Reset margin-top */
   }
 }
 
+/* For screens 480px and smaller */
 @media (max-width: 480px) {
   .logo__header {
-    flex-direction: column; /* Stack the logo and contact info vertically */
+    flex-direction: column; /* Stack logo and contact info vertically */
     align-items: center; /* Center-align everything */
-    gap: 1rem; /* Adjust gap for better spacing */
+    gap: 0.5rem; /* Adjust gap */
+    padding: 0.5rem; /* Adjust padding */
   }
 
   .logo__header img {
-    max-width: 40px; /* Slightly reduce the logo size on smaller screens */
-    margin-left: 0; /* Ensure no unwanted margin on small screens */
+    max-width: 30px; /* Further reduce logo size */
+    margin-left: 0; /* Reset margin-left */
+    margin-top: 0; /* Reset margin-top */
   }
 }
 .contact__us {
@@ -93,6 +99,7 @@ body {
   align-items: center;
   gap: 2rem;
   flex-wrap: wrap;
+  margin-top: -80px;
 }
 
 .contact__us p {
@@ -121,9 +128,42 @@ body {
 .contact__us i {
   margin-right: 0.5rem; /* Space between icon and text */
 }
+@media (max-width: 768px) {
+  .contact__us {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center-align items */
+    gap: 1rem; /* Reduce gap between items */
+    margin-top: 0; /* Reset margin-top to avoid overlap */
+  }
+
+  .contact__us p {
+    font-size: 1rem; /* Increase font size for better readability */
+  }
+
+  .contact__us i {
+    font-size: 1.2rem; /* Increase icon size */
+  }
+}
+
+/* For screens 480px and smaller */
+@media (max-width: 480px) {
+  .contact__us {
+    gap: 0.5rem; /* Further reduce gap */
+    padding: 1.1rem; /* Add some padding if needed */
+  }
+
+  .contact__us p {
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
+  }
+
+  .contact__us i {
+    font-size: 1rem; /* Adjust icon size */
+  }
+}
 nav{
   background-color: white;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  margin-top: -100px;
 }
 nav ul{
   width: 100%;
@@ -181,11 +221,11 @@ nav a:hover{
 }
 @media(max-width: 400px){
   .sidebar{
-    width: 100%;
+    width: 50%;
   }
 }
 header {
-  min-height: 40rem;
+  min-height: 35rem;
   background-image: url("assets/about.jpeg");
   background-position: center center;
   background-size: cover;
@@ -256,11 +296,48 @@ header {
   font-weight: 400;
   margin-bottom: 10px;
 }
-.all-text h1{
-  font-size: 65px;
-  color: #111111;
-  font-weight: 700;
-  margin-bottom: 20px;
+
+
+.header__container h1,
+.all-text h1 {
+  font-size: 4rem; /* Default size for larger screens */
+  margin: 0; /* Remove default margin */
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* Media Queries */
+
+/* For tablets and medium screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .header__container h1 {
+    font-size: 3rem; /* Reduce font size for smaller screens */
+  }
+
+  .all-text h1 {
+    font-size: 2.5rem; /* Slightly smaller font size for all-text section */
+  }
+}
+
+/* For small devices like smartphones (max-width: 480px) */
+@media (max-width: 480px) {
+  .header__container h1 {
+    font-size: 2.2rem; /* Further reduce font size */
+  }
+
+  .all-text h1 {
+    font-size: 1.8rem; /* Further reduce font size for small screens */
+  }
+}
+
+/* For very small screens (max-width: 320px) */
+@media (max-width: 320px) {
+  .header__container h1 {
+    font-size: 1.8rem; /* Further reduce font size */
+  }
+
+  .all-text h1 {
+    font-size: 1.5rem; /* Reduce font size further for very small screens */
+  }
 }
 .all-text p{
   font-family:EB Garamond;
@@ -269,7 +346,7 @@ header {
   line-height: 30px;
   margin-bottom: 35px;
 }
-.btn button{
+.btn button {
   background: white;
   padding: 20px 32px;
   font-size: 16px;
@@ -280,15 +357,61 @@ header {
   box-shadow: 0px 16px 32px 0px rgb(0 0 0 / 6%);
   margin-right: 20px;
 }
-.btn button:hover{
+
+.btn button:hover {
   background-color: black;
   color: white;
-  transition: .3s;
-  cursor:pointer;
+  transition: 0.3s;
+  cursor: pointer;
 }
-.btn .btn2{
+
+/* Additional .btn2 button styling */
+.btn .btn2 {
   background: #111111;
   color: white;
+  padding: 20px 32px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  margin-right: 20px;
+  box-shadow: 0px 16px 32px 0px rgb(0 0 0 / 6%);
+}
+
+.btn .btn2:hover {
+  background-color: white;
+  color: #111111;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+/* Media Queries */
+
+/* For tablets and medium screens */
+@media (max-width: 768px) {
+  .btn button, .btn .btn2 {
+    padding: 16px 28px; /* Reduced padding */
+    font-size: 14px;    /* Smaller font size */
+    margin-right: 15px;
+  }
+}
+
+/* For small devices and phones */
+@media (max-width: 480px) {
+  .btn button, .btn .btn2 {
+    padding: 12px 24px; /* Further reduced padding */
+    font-size: 12px;    /* Smaller font size */
+    margin-right: 10px;
+  }
+}
+
+/* For very small devices */
+@media (max-width: 320px) {
+  .btn button, .btn .btn2 {
+    padding: 10px 20px; /* Minimum padding */
+    font-size: 11px;    /* Smallest font size */
+    margin-right: 5px;
+  }
 }
 @media screen and (max-width: 1250px) {
   .about{
@@ -335,7 +458,98 @@ header {
   width: 40px;
   margin: auto;
 }
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+}
 
+.section__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+}
+
+.section__title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.arrivals__nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.arrivals__nav span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  cursor: pointer;
+}
+
+.arrivals__nav span:hover {
+  color: var(--primary-color);
+}
+
+/* Media Queries */
+
+/* For tablets and medium screens */
+@media (max-width: 768px) {
+  .section__title {
+    font-size: 1.75rem; /* Reduce font size for section title */
+  }
+
+  .arrivals__nav {
+    gap: 0.5rem; /* Reduce gap between spans */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  }
+
+  .arrivals__nav span {
+    font-size: 0.9rem; /* Reduce font size for service categories */
+  }
+}
+
+/* For small devices and phones */
+@media (max-width: 480px) {
+  .section__header {
+    flex-direction: column; /* Stack the section title and nav vertically */
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .section__title {
+    font-size: 1.5rem; /* Further reduce font size for section title */
+  }
+
+  .arrivals__nav {
+    gap: 0.3rem; /* Narrow gap between nav items */
+    justify-content: flex-start; /* Align the navigation items to the left */
+  }
+
+  .arrivals__nav span {
+    font-size: 0.85rem; /* Smaller font size for service categories */
+  }
+}
+
+/* For very small devices */
+@media (max-width: 320px) {
+  .section__title {
+    font-size: 1.25rem; /* Smallest title font size */
+  }
+
+  .arrivals__nav {
+    gap: 0.2rem;
+    justify-content: flex-start;
+  }
+
+  .arrivals__nav span {
+    font-size: 0.75rem; /* Smallest font size for service categories */
+  }
+}
 .arrivals__nav {
   display: flex;
   gap: 2rem;
@@ -348,8 +562,15 @@ header {
   transition: 0.3s;
 }
 
+.arrivals__nav span {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
 .arrivals__nav span:hover {
-  color: var(--primary-color);
+  color: var(--primary-color); /* Hover color change */
+  transform: scale(1.05); /* Slight zoom on hover */
+  transition: 0.3s ease-in-out;
 }
 
 .arrivals__grid {
@@ -362,30 +583,151 @@ header {
 .product__image {
   display: flex;
 }
+
 .arrivals__image {
   width: 100%;
 }
 
 .arrivals__image img {
   width: 100%;
-  height: auto; /* Set a fixed height */
+  height: auto;
   max-width: 100%;
-  object-fit: cover; /* Ensures images cover the area without distortion, cropping if necessary */
+  object-fit: cover;
 }
 
-.seller__nav,
-.product__nav {
+/* Media Queries */
+
+/* For medium screens like tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .arrivals__nav span {
+    font-size: 0.9rem; /* Reduce font size for smaller screens */
+  }
+
+  .arrivals__nav span:hover {
+    color: var(--primary-color); /* Keep hover color */
+    transform: scale(1.03); /* Slightly smaller zoom on hover for medium screens */
+  }
+
+  .arrivals__grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust columns for tablets */
+    gap: 1.5rem; /* Reduce gap between items */
+  }
+
+  .arrivals__image img {
+    height: auto; /* Ensure images adjust height automatically */
+    object-fit: cover;
+  }
+}
+
+/* For small devices like smartphones (max-width: 480px) */
+@media (max-width: 480px) {
+  .arrivals__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* Stack nav items vertically */
+    align-items: flex-start;
+  }
+
+  .arrivals__nav span {
+    font-size: 0.85rem; /* Slightly smaller font size on small screens */
+  }
+
+  .arrivals__nav span:hover {
+    color: var(--primary-color); /* Keep hover color */
+    transform: scale(1.02); /* Smaller zoom on hover for small screens */
+  }
+
+  .arrivals__grid {
+    grid-template-columns: 1fr; /* Single column layout on small screens */
+    gap: 1rem; /* Reduce gap */
+  }
+
+  .arrivals__image img {
+    height: auto;
+    object-fit: cover; /* Maintain object-fit for smaller screens */
+  }
+}
+
+/* For very small screens (max-width: 320px) */
+@media (max-width: 320px) {
+  .arrivals__nav span {
+    font-size: 0.75rem; /* Further reduce font size */
+  }
+
+  .arrivals__nav span:hover {
+    color: var(--primary-color); /* Keep hover color */
+    transform: scale(1); /* No zoom on hover for very small screens */
+  }
+
+  .arrivals__grid {
+    gap: 0.5rem; /* Further reduce gap between items */
+  }
+
+  .arrivals__image img {
+    height: auto;
+    object-fit: cover;
+  }
+}
+.seller__nav {
   font-size: 2rem;
   color: var(--text-dark);
-  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem; /* Adjusts spacing between spans */
 }
 
-.seller__nav span,
-.product__nav span {
+.seller__nav span {
   cursor: pointer;
   transition: 0.3s;
 }
 
+.seller__nav span:hover {
+  color: var(--primary-color); /* Change color on hover */
+  transform: scale(1.05); /* Slight zoom on hover */
+  transition: 0.3s ease-in-out;
+}
+
+/* Media Queries */
+
+/* For medium screens like tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .seller__nav {
+    font-size: 1.5rem; /* Slightly reduce font size */
+    gap: 0.5rem; /* Decrease gap between spans */
+  }
+
+  .seller__nav span:hover {
+    transform: scale(1.03); /* Smaller zoom on hover for medium screens */
+  }
+}
+
+/* For small devices like smartphones (max-width: 480px) */
+@media (max-width: 480px) {
+  .seller__nav {
+    flex-wrap: wrap; /* Allow wrapping of spans to prevent overflow */
+    justify-content: center; /* Center spans when wrapped */
+    font-size: 1.2rem; /* Further reduce font size for small screens */
+    gap: 0.3rem; /* Decrease gap for small screens */
+  }
+
+  .seller__nav span:hover {
+    transform: scale(1.02); /* Smaller zoom on hover for small screens */
+  }
+}
+
+/* For very small screens (max-width: 320px) */
+@media (max-width: 320px) {
+  .seller__nav {
+    flex-direction: column; /* Stack spans vertically */
+    align-items: flex-start; /* Align spans to the left */
+    font-size: 1rem; /* Reduce font size further */
+    gap: 0.2rem; /* Minimal gap between spans */
+  }
+
+  .seller__nav span:hover {
+    transform: scale(1); /* Remove zoom on hover for very small screens */
+  }
+}
 .seller__nav span:hover,
 .product__nav span:hover {
   color: var(--primary-color);
@@ -429,18 +771,62 @@ header {
   background-size: cover;
 }
 
-.banner__3__container {
-  color: var(--white);
-  text-align: center;
-  padding: 8rem 1rem;
+.banner__3 {
+  padding: 2rem 0; /* Padding around the section */
+  background-color: #f4f4f4; /* Background color for the section (optional) */
 }
 
-.banner__3__container p {
-  font-size: 1.5rem;
+.banner_3_container {
+  text-align: center; /* Center align text */
 }
 
-.banner__3__container h2 {
-  font-size: 3rem;
+.banner__3 p {
+  font-size: 1.5rem; /* Default font size for paragraph */
+  color: white; /* Text color (replace with your variable or color) */
+  margin-bottom: 1rem; /* Margin below the paragraph */
+}
+
+.banner__3 h2 {
+  font-size: 2.5rem; /* Default font size for heading */
+  color: white; /* Heading color (replace with your variable or color) */
+}
+
+/* Media Queries */
+
+/* For tablets and medium screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .banner__3 p {
+    font-size: 1.2rem; /* Slightly smaller font size for paragraph */
+    margin-bottom: 0.5rem; /* Reduce margin below paragraph */
+  }
+
+  .banner__3 h2 {
+    font-size: 2rem; /* Slightly smaller font size for heading */
+  }
+}
+
+/* For small devices like smartphones (max-width: 480px) */
+@media (max-width: 480px) {
+  .banner__3 p {
+    font-size: 1rem; /* Further reduce font size for paragraph */
+    margin-bottom: 0.3rem; /* Further reduce margin below paragraph */
+  }
+
+  .banner__3 h2 {
+    font-size: 1.5rem; /* Further reduce font size for heading */
+  }
+}
+
+/* For very small screens (max-width: 320px) */
+@media (max-width: 320px) {
+  .banner__3 p {
+    font-size: 0.9rem; /* Smallest font size for paragraph */
+    margin-bottom: 0.2rem; /* Minimal margin below paragraph */
+  }
+
+  .banner__3 h2 {
+    font-size: 1.3rem; /* Smallest font size for heading */
+  }
 }
 
 .product__grid {
@@ -479,7 +865,7 @@ header {
 
 @media (max-width: 480px) {
   .product__grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
   .product__image {
     height: 200px;
@@ -489,10 +875,12 @@ footer {
   background-color: var(--text-light);
   margin-top: 80px;
 }
+
 .footer__logo {
   max-width: 80px;
   height: auto;
 }
+
 .footer__container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -509,24 +897,28 @@ footer {
   font-size: 1rem;
   margin-right: 1rem;
 }
-.footer__col a{
+
+.footer__col a {
   text-decoration: none; /* Remove default underline */
   color: var(--text-dark); /* Set text color */
   display: flex; /* Align icon and text */
   align-items: center; /* Center icon and text vertically */
 }
+
 .footer__col a:hover {
   color: var(--primary-color); /* Change color on hover */
 }
+
 .footer__col h4 {
   font-size: 0.8rem;
   font-weight: 600;
   margin-bottom: 1rem;
- 
 }
+
 .footer__col h3 {
   margin-bottom: 30px;
 }
+
 .footer__col p {
   font-size: 0.8rem;
   font-weight: 600;
@@ -538,14 +930,13 @@ footer {
 .footer__col p:hover {
   color: var(--primary-color);
 }
+
 .footer__socials {
   margin-top: 2rem;
   display: flex;
   align-items: center;
   gap: 1rem;
   flex-wrap: wrap;
-
-
 }
 
 .footer__socials img {
@@ -553,7 +944,6 @@ footer {
   opacity: 0.8;
   transition: 0.3s;
   margin-right: 15px;
-
 }
 
 .footer__socials img:hover {
@@ -567,6 +957,109 @@ footer {
   text-align: center;
   color: var(--white);
   background-color: var(--primary-color);
+}
+
+/* Media Queries */
+
+/* For tablets and medium screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .footer__container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+
+  .footer__logo {
+    max-width: 60px;
+  }
+
+  .footer__col img {
+    max-width: 60px;
+  }
+
+  .footer_col h4, .footer_col p {
+    font-size: 0.7rem;
+  }
+
+  .footer__col i {
+    font-size: 0.9rem;
+  }
+
+  .footer__socials {
+    gap: 0.5rem;
+  }
+
+  .footer__socials img {
+    max-width: 20px;
+    margin-right: 10px;
+  }
+
+  .footer__bar {
+    font-size: 0.7rem;
+  }
+}
+
+/* For small devices like smartphones (max-width: 480px) */
+@media (max-width: 480px) {
+  .footer__container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer__logo {
+    max-width: 50px;
+  }
+
+  .footer__col img {
+    max-width: 50px;
+  }
+
+  .footer_col h4, .footer_col p {
+    font-size: 0.6rem;
+  }
+
+  .footer__col i {
+    font-size: 0.8rem;
+  }
+
+  .footer__socials {
+    gap: 0.3rem;
+  }
+
+  .footer__socials img {
+    max-width: 15px;
+    margin-right: 5px;
+  }
+
+  .footer__bar {
+    font-size: 0.6rem;
+  }
+}
+
+/* For very small screens (max-width: 320px) */
+@media (max-width: 320px) {
+  .footer__logo {
+    max-width: 40px;
+  }
+
+  .footer__col img {
+    max-width: 40px;
+  }
+
+  .footer_col h4, .footer_col p {
+    font-size: 0.5rem;
+  }
+
+  .footer__col i {
+    font-size: 0.7rem;
+  }
+
+  .footer__socials img {
+    max-width: 10px;
+  }
+
+  .footer__bar {
+    font-size: 0.5rem;
+  }
 }
 
 @media (max-width: 900px) {
