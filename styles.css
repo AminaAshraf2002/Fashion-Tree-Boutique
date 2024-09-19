@@ -62,7 +62,7 @@ body {
 
 .logo__header img {
   max-width: 50px;
-  margin-left: -180px;
+  margin-left: -150px;
   margin-top: -80px;
 }
 @media (max-width: 768px) {
@@ -245,7 +245,8 @@ header {
   font-size: 4rem;
 }
 
-.header__container button {
+.header__container button,
+.header__container a.btn {
   margin-top: 1rem;
   padding: 1rem 2rem;
   outline: none;
@@ -255,10 +256,34 @@ header {
   background-color: var(--primary-color);
   cursor: pointer;
   transition: 0.3s;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
 }
 
+.header__container a.btn:hover,
 .header__container button:hover {
   background-color: var(--primary-color-dark);
+}
+
+/* Media queries for responsive design */
+
+/* Tablets and smaller screens */
+@media (max-width: 768px) {
+  .header__container button,
+  .header__container a.btn {
+    padding: 0.75rem 1.5rem; /* Adjust padding for smaller screens */
+    font-size: 0.875rem; /* Adjust font size */
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+  .header__container button,
+  .header__container a.btn {
+    padding: 0.5rem 1rem; /* Further adjust padding for mobile */
+    font-size: 0.75rem; /* Further adjust font size */
+  }
 }
 .about{
   height: 100vh;
